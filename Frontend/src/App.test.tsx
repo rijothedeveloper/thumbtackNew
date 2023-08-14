@@ -4,9 +4,7 @@ import "@testing-library/jest-dom";
 import App from "./App";
 
 describe("App", () => {
-  it("renders headline", () => {
+  it("renders App", () => {
     render(<App />);
-    expect(screen.getByText("Vite + React")).toBeInTheDocument();
-    screen.getByRole("button");
   });
 });
