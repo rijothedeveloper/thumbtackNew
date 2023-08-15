@@ -2,15 +2,18 @@ form {
   display: flex;
 }
 
+form > * {
+  padding: 20px 16px;
+  border: 1px solid var(--border-color);
+}
+
 input {
   flex: 0.9;
-  background-color: white !important;
-  border-style: hidden;
+  background-color: white;
 }
 
 .searchButton {
   flex: 0.1;
   background-color: #009fd9;
-  border-radius: 0px;
-  border-style: hidden;
+  border-radius: 0px 10px 10px 0px;
 }

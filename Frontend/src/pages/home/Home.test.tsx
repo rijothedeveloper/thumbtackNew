@@ -8,10 +8,17 @@ describe("Home", () => {
     render(<Home />);
   });
 
-  test("returns home improvement made easy", () => {
+  test("shows hero heading", () => {
     render(<Home />);
     expect(screen.getByText("Home,")).toBeInTheDocument();
     expect(screen.getByText("improvement,")).toBeInTheDocument();
     expect(screen.getByText("made easy")).toBeInTheDocument();
+  });
+
+  test("shows sub heading", () => {
+    render(<Home />);
+    expect(screen.getByText("Try searching")).toBeInTheDocument();
+    expect(screen.getByText("plumber,")).toBeInTheDocument();
+    expect(screen.getByText("handyman")).toBeInTheDocument();
   });
 });

@@ -2,15 +2,41 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 10px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.navbar {
+  width: 100vw;
+  height: 60px;
 }
 
 .main-section {
+
 }
 
 .home-hero {
   font-weight: 800;
   font-size: 38px;
   line-height: 40px;
+  margin-bottom: 40px;
 }
+
+.h4-searchTip {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 16px;
+}
+
+.h4-searchTip span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.bottom-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
