@@ -3,6 +3,8 @@ version: "3.8"
 services:
   web:
     build: ./backend
+    depends_on:
+      - postgres
     env_file:
       - .env
     ports:
@@ -11,8 +13,9 @@ services:
       - ./backend:/usr/src/app
     command: go run main.go -b 0.0.0.0
 
-  db:
+  postgres:
     image: postgres:alpine
+    restart: always
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}

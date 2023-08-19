@@ -3,11 +3,18 @@ package main
 import (
 	"log"
 	"net/http"
-	categorycontroller "thumtack_category/categoryController"
+
+	"thumtack_category/config"
+	controler "thumtack_category/controlers"
 )
 
+func init() {
+	config.ConnectDB();
+}
+
+
 func main() {
-	http.HandleFunc("/categories", categorycontroller.GetCategories)
+	http.HandleFunc("/categories", controler.GetCategories)
 	error := http.ListenAndServe(":8080", nil)
 	if error != nil {
 		log.Fatal("error starting server")
