@@ -17,8 +17,8 @@ describe("Home", () => {
 
   test("shows sub heading", () => {
     render(<Home />);
-    expect(screen.getByText("Try searching")).toBeInTheDocument();
-    expect(screen.getByText("plumber,")).toBeInTheDocument();
-    expect(screen.getByText("handyman")).toBeInTheDocument();
+    expect(screen.getByText(/^Try searching/)).toBeInTheDocument();
+    expect(screen.getByText(/-*Plumber-*/)).toBeInTheDocument();
+    expect(screen.getByText(/-*Handyman-*/)).toBeInTheDocument();
   });
 });
