@@ -12,9 +12,11 @@ jobs:
 
     steps:
       - name: Setup code repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v3
+      - name: printing directory
+        run: ls -la
       - name: install dependencies
         working-directory: ./frontend
         run: npm ci
