@@ -18,6 +18,6 @@ jobs:
       - name: printing directory
         run: ls -la
       - name: install dependencies
-        working-directory: ./frontend
+        working-directory: ./Frontend
         run: npm ci
       # - run: npm test
